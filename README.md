@@ -10,3 +10,6 @@ We apply the STEAD Dataset for different kind of denoising models, showing the d
 
 ## Dataset
 You can find the Dataset used for training, evaluation and testing at the following link: https://drive.google.com/drive/folders/1t_jZ0rNiYasJU7_jSrfy-g6aTZ-rkvOu?usp=sharing
+
+## Related Paper
+[Seismic Signal Denoising and Decomposition Using Deep Neural Networks](https://arxiv.org/abs/1811.02695)
