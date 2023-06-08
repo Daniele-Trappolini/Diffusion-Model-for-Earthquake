@@ -12,4 +12,8 @@ We apply the STEAD Dataset for different kind of denoising models, showing the d
 You can find the Dataset used for training, evaluation and testing at the following link: https://drive.google.com/drive/folders/1t_jZ0rNiYasJU7_jSrfy-g6aTZ-rkvOu?usp=sharing
 
 ## Related Paper
-[Seismic Signal Denoising and Decomposition Using Deep Neural Networks](https://arxiv.org/abs/1811.02695)
+* [Seismic Signal Denoising and Decomposition Using Deep Neural Networks](https://arxiv.org/abs/1811.02695)
+* [Cold Diffusion: Inverting Arbitrary Image Transforms Without Noise](https://arxiv.org/abs/2208.09392)
+
+## Overleaf Link (Temporary)
+* ["draft paper"](https://www.overleaf.com/8838977992jktrdzrdcqss)
