@@ -16,4 +16,4 @@ You can find the Dataset used for training, evaluation and testing at the follow
 * [Cold Diffusion: Inverting Arbitrary Image Transforms Without Noise](https://arxiv.org/abs/2208.09392)
 
 ## Overleaf Link (Temporary)
-* ["draft paper"](https://www.overleaf.com/8838977992jktrdzrdcqss)
+* [Draft Paper"](https://www.overleaf.com/8838977992jktrdzrdcqss)
