@@ -17,3 +17,6 @@ You can find the Dataset used for training, evaluation and testing at the follow
 
 ## Overleaf Link (Temporary)
 * [Draft Paper](https://www.overleaf.com/8838977992jktrdzrdcqss)
+
+## Other Material (Temporary)
+*[Cold Diffusion Material](https://nimble-capri-8e2.notion.site/Cold-Diffusion-b3a6bdce9c2d4c0097aeb814bb86b2ea?pvs=4)
