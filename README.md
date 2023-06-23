@@ -8,6 +8,9 @@ We apply the STEAD Dataset for different kind of denoising models, showing the d
 
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/assets/119054935/7938d924-c31e-4cbb-997f-63ba86784f22)
 
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/assets/119054935/af190f60-53f0-4788-94e3-e9b4e5edb909)
+
+
 ## Dataset
 You can find the Dataset used for training, evaluation and testing at the following link: https://drive.google.com/drive/folders/1t_jZ0rNiYasJU7_jSrfy-g6aTZ-rkvOu?usp=sharing
 
