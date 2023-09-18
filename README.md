@@ -24,24 +24,24 @@ One Example of Cold Diffusion Denoising through 500 time step applied on INSTANC
 
 Examples of Cold Diffusion with small T applied on STEAD dataset:
 
-** T = 5 example 1**
+**T = 5 example 1**
 
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D5.jpg)
 
-** T = 10 example 1**
+**T = 10 example 1**
 
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D2.jpg)
 
-** T = 5 example 2**
+**T = 5 example 2**
 
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D5_2.jpg)
 
-** T = 10 example 2**
+**T = 10 example 2**
 
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D10_2.jpg)
 
 
-** Some Possible Application **
+**Some Possible Application**
 
 - Enhance automatic picking performance:
 
