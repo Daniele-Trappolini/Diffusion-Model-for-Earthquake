@@ -30,7 +30,7 @@ Examples of Cold Diffusion with small T applied on STEAD dataset:
 
 ** T = 10 example 1**
 
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D10.jpg)
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D2.jpg)
 
 ** T = 5 example 2**
 
