@@ -8,15 +8,18 @@ Apply diffusion models for denoising seismograms.
 We apply the STEAD and INSTANCE Dataset for different kind of denoising models, showing the different performance for each model:
 
 **INSTANCE PDF using SI-SDR as metric**
+
+
+
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/Instance_PDF.jpg)
 
 
-
-
-
-
-
 **STEAD PDF using SI-SDR as metric**
+
+
+
+
+
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/Stead_PDF.jpg)
 
 
