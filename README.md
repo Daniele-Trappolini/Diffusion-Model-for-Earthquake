@@ -1,8 +1,8 @@
-# Diffusion-Model-for-Earthquake
+# Cold Diffusion Model for seismic signal denoising
 
 The code will be soon released
 
-## Introduction
+## Some Results
 Apply diffusion models for denoising seismograms. 
 
 We apply the STEAD and INSTANCE Dataset for different kind of denoising models, showing the different performance for each model:
@@ -26,6 +26,26 @@ We apply the STEAD and INSTANCE Dataset for different kind of denoising models, 
 * One Example of Cold Diffusion Denoising through 500 time step applied on INSTANCE dataset:
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/Denoised.jpg)
 
+* Examples of Cold Diffusion with small T applied on STEAD dataset:
+
+** T = 5 example 1**
+
+
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D5.jpg)
+
+** T = 10 example 1**
+
+
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D10.jpg)
+
+** T = 5 example 2**
+
+
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D5_2.jpg)
+
+** T = 10 example 2**
+
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D10_2.jpg)
 
 ## Dataset
 
