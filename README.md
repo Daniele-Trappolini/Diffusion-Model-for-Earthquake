@@ -47,8 +47,6 @@ Examples of Cold Diffusion with small T applied on STEAD dataset:
 
  WORK IN PROGRESS....
 
- ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker_example.png)
-
 ## Dataset
 
 **Distribution of INSTANCE Dataset**
