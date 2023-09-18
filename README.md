@@ -5,10 +5,13 @@ The code will be soon released
 ## Introduction
 Apply diffusion models for denoising seismograms. 
 
-We apply the STEAD Dataset for different kind of denoising models, showing the different performance for each model:
+We apply the STEAD and INSTANCW Dataset for different kind of denoising models, showing the different performance for each model:
 
+**Distribution of INSTANCE Dataset**
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/INSTANCE_dataset.png)
 
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/assets/119054935/7938d924-c31e-4cbb-997f-63ba86784f22)
+**Distribution of STEAD Dataser**
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/Stead_dataset.png)
 
 * One Example of Cold Diffusion Denoising through 5 time step:
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/assets/119054935/af190f60-53f0-4788-94e3-e9b4e5edb909)
