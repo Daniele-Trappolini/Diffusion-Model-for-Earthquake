@@ -1,5 +1,7 @@
 # Diffusion-Model-for-Earthquake
 
+The code will be soon released
+
 ## Introduction
 Apply diffusion models for denoising seismograms. 
 
