@@ -24,7 +24,8 @@ In Example 2, we demonstrate the Cold Diffusion Model's superiority in preservin
 
 
 **Some Possible Application**
--Enhance automatic picking performance:
+
+#### Enhance automatic picking performance:
 <p align="center">
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="375">
 </p>
