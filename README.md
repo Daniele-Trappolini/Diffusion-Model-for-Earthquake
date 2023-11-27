@@ -6,22 +6,26 @@ The code will be soon released
 Apply diffusion models for denoising seismograms. 
 
 We utilize the STEAD Dataset for various denoising models, demonstrating the distinct performance of each model:
-
-<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/399.png" width="375">
-
-<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737.png" width="375">
+<p align="center">
+  <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/399.png" width="375">
+</p>
+<p align="center">
+  <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737.png" width="375">
+</p>
 
 **Some Possible Application**
 
 - Enhance automatic picking performance:
-
-<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="375">
+<p align="center">
+  <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="375">
+</p>
 
 ## Dataset
 
 **Distribution of STEAD Dataset**
-<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/STEAD.png" width="500">
-
+<p align="center">
+  <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/STEAD.png" width="500">
+</p>
 You can find the Dataset used for training, evaluation and testing at the following link: https://drive.google.com/drive/folders/1t_jZ0rNiYasJU7_jSrfy-g6aTZ-rkvOu?usp=sharing
 
 ## Related Paper
