@@ -16,10 +16,7 @@ We utilize the STEAD Dataset for various denoising models, demonstrating the dis
 
 ## Dataset
 
-**Distribution of INSTANCE Dataset**
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/INSTANCE_dataset.png)
-
-**Distribution of STEAD Dataser**
+**Distribution of STEAD Dataset**
 ![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/Stead_dataset.png)
 
 You can find the Dataset used for training, evaluation and testing at the following link: https://drive.google.com/drive/folders/1t_jZ0rNiYasJU7_jSrfy-g6aTZ-rkvOu?usp=sharing
