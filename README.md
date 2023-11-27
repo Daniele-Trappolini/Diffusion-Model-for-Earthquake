@@ -23,7 +23,7 @@ This figure showcases a superior performance of the sampling method in compariso
 In Example 2, we demonstrate the Cold Diffusion Model's superiority in preserving seismic signal amplitudes through a sampling strategy ('sampling 300'). This method aligns more accurately with the original waveform, maintaining amplitude integrity, as contrasted with the U-Net model ('direct 300') which exhibits amplitude attenuation and increased residuals, particularly in higher amplitude segments.
 
 
-**Some Possible Application**
+## Some Possible Application
 
 #### Enhance automatic picking performance:
 <p align="center">
