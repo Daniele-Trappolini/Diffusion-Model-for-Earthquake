@@ -15,6 +15,7 @@ We utilize the STEAD Dataset for various denoising models, demonstrating the dis
 This figure showcases a superior performance of the sampling method in comparison to the direct model. Notably, the direct model exhibits a tendency to retain a certain level of noise prior to the P-wave arrival, which is not observed in the sampling method. This retention of noise in the direct model can lead to premature P-wave picks, as evidenced in the data. Conversely, the sampling method demonstrates a more accurate noise reduction, resulting in a clearer delineation of the P-wave arrival. This comparison underlines the enhanced capability of the sampling method in accurately identifying seismic events, thereby reducing the likelihood of early P-wave detection errors inherent in the direct model approach.
 
 #### Example 2: Qualitative Amplitude Analysis
+
 <p align="center">
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737_direct300.jpg" width="375">
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737_sampling300.jpg" width="375"> 
@@ -24,6 +25,7 @@ In Example 2, we demonstrate the Cold Diffusion Model's superiority in preservin
 
 
 **Some Possible Application**
+
 <p>
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="375" style="float: left; margin-right: 10px;">
   <span style="display: block; overflow: hidden;">
