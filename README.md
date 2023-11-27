@@ -7,15 +7,15 @@ Apply diffusion models for denoising seismograms.
 
 We utilize the STEAD Dataset for various denoising models, demonstrating the distinct performance of each model:
 
-<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/399.png" width="500">
+<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/399.png" width="375">
 
-<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737.png" width="500">
+<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737.png" width="375">
 
 **Some Possible Application**
 
 - Enhance automatic picking performance:
 
-<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="500">
+<img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="375">
 
 ## Dataset
 
