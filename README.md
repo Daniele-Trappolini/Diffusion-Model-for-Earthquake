@@ -16,7 +16,7 @@ We utilize the STEAD Dataset for various denoising models, demonstrating the dis
 
 - Enhance automatic picking performance:
 
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.pdf)
+![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg)
 
 ## Dataset
 
