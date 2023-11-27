@@ -5,47 +5,14 @@ The code will be soon released
 ## Some Results
 Apply diffusion models for denoising seismograms. 
 
-We apply the STEAD and INSTANCE Dataset for different kind of denoising models, showing the different performance for each model:
-
-**INSTANCE PDF using SI-SDR as metric**
-
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/Instance_PDF.jpg)
-
-
-**STEAD PDF using SI-SDR as metric**
-
-
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/Stead_PDF.jpg)
-
-
-One Example of Cold Diffusion Denoising through 500 time step applied on INSTANCE dataset:
-
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/Denoised.jpg)
-
-Examples of Cold Diffusion with small T applied on STEAD dataset:
-
-**T = 5 example 1**
-
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D5.jpg)
-
-**T = 10 example 1**
-
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D2.jpg)
-
-**T = 5 example 2**
-
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D5_2.jpg)
-
-**T = 10 example 2**
-
-![image](https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/T%3D10_2.jpg)
+We utilize the STEAD Dataset for various denoising models, demonstrating the distinct performance of each model:
 
 
 **Some Possible Application**
 
 - Enhance automatic picking performance:
 
- WORK IN PROGRESS....
+
 
 ## Dataset
 
