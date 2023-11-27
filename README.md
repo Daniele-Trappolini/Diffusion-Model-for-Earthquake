@@ -11,6 +11,11 @@ We utilize the STEAD Dataset for various denoising models, demonstrating the dis
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/399_sampling300.jpg" width="375"> 
 </p>
 
+<p align="center">
+  <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737_direct300.jpg" width="375">
+  <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737_sampling300.jpg" width="375"> 
+</p>
+
 **Some Possible Application**
 
 - Enhance automatic picking performance:
