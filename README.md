@@ -7,14 +7,14 @@ Apply diffusion models for denoising seismograms.
 
 We utilize the STEAD Dataset for various denoising models, demonstrating the distinct performance of each model:
 
-#### Example 1: Qualitative Picker Analysis
+**Example 1: Qualitative Picker Analysis**
 <p align="center">
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/399_direct300.jpg" width="375">
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/399_sampling300.jpg" width="375"> 
 </p>
 This figure showcases a superior performance of the sampling method in comparison to the direct model. Notably, the direct model exhibits a tendency to retain a certain level of noise prior to the P-wave arrival, which is not observed in the sampling method. This retention of noise in the direct model can lead to premature P-wave picks, as evidenced in the data. Conversely, the sampling method demonstrates a more accurate noise reduction, resulting in a clearer delineation of the P-wave arrival. This comparison underlines the enhanced capability of the sampling method in accurately identifying seismic events, thereby reducing the likelihood of early P-wave detection errors inherent in the direct model approach.
 
-#### Example 2: Qualitative Amplitude Analysis
+**Example 2: Qualitative Amplitude Analysis**
 
 <p align="center">
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/5737_direct300.jpg" width="375">
@@ -22,10 +22,9 @@ This figure showcases a superior performance of the sampling method in compariso
 </p>
 In Example 2, we demonstrate the Cold Diffusion Model's superiority in preserving seismic signal amplitudes through a sampling strategy ('sampling 300'). This method aligns more accurately with the original waveform, maintaining amplitude integrity, as contrasted with the U-Net model ('direct 300') which exhibits amplitude attenuation and increased residuals, particularly in higher amplitude segments.
 
-
 ## Some Possible Application
 
-#### Enhance automatic picking performance:
+**Enhance automatic picking performance**
 <p align="center">
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="375">
 </p>
