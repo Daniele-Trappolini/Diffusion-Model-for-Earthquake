@@ -23,14 +23,13 @@ This figure showcases a superior performance of the sampling method in compariso
 In Example 2, we demonstrate the Cold Diffusion Model's superiority in preserving seismic signal amplitudes through a sampling strategy ('sampling 300'). This method aligns more accurately with the original waveform, maintaining amplitude integrity, as contrasted with the U-Net model ('direct 300') which exhibits amplitude attenuation and increased residuals, particularly in higher amplitude segments.
 
 
-
 **Some Possible Application**
 
 <p>
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="375" style="float: left; margin-right: 10px;">
   <span style="display: block; overflow: hidden;">
     Enhance automatic picking performance:
-    <!-- In our evaluation, we applied PhaseNet to waveforms for assessing denoiser impacts on P and S wave arrivals. Histograms comparing "direct," "sampling," and "deep denoiser" methods highlighted the "sampling" method's superior accuracy in aligning with manual picks, especially at higher parameter settings. The "direct" method showed improved P-wave accuracy with parameter increases, while the "deep denoiser" displayed moderate recall rates. Overall, S-wave detections were consistently precise across methods, but P-wave picks varied, with the "sampling" method showing the least discrepancy from manual picks. This study underscores the significance of denoising in automated seismic analysis, with the "sampling" approach being notably effective. -->
+    In our evaluation, we applied PhaseNet to waveforms for assessing denoiser impacts on P and S wave arrivals. Histograms comparing "direct," "sampling," and "deep denoiser" methods highlighted the "sampling" method's superior accuracy in aligning with manual picks, especially at higher parameter settings. The "direct" method showed improved P-wave accuracy with parameter increases, while the "deep denoiser" displayed moderate recall rates. Overall, S-wave detections were consistently precise across methods, but P-wave picks varied, with the "sampling" method showing the least discrepancy from manual picks. This study underscores the significance of denoising in automated seismic analysis, with the "sampling" approach being notably effective.
   </span>
 </p>
 
