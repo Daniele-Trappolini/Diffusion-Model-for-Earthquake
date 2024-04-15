@@ -36,7 +36,7 @@ In our evaluation, we applied PhaseNet to waveforms for assessing denoiser impac
 <p align="center">
   <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/STEAD.png" width="500">
 </p>
-You can find the Dataset used for training, evaluation and testing at the following link: https://drive.google.com/drive/folders/1t_jZ0rNiYasJU7_jSrfy-g6aTZ-rkvOu?usp=sharing
+You can find the Dataset used for training, evaluation and testing on Zenodo: [STEAD subsample 4 CDiffSD](10.5281/zenodo.10972601)
 
 ## Related Paper
 * [Seismic Signal Denoising and Decomposition Using Deep Neural Networks](https://arxiv.org/abs/1811.02695)
