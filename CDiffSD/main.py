@@ -1,13 +1,14 @@
 import config_parser as cp
-from train_validate import train_model
+from train_validate import train_model,test_model
+from torch.utils.data import DataLoader
 import pandas as pd
 from scheduler import *
 import pdb
-import matplotlib.pyplot as plt
 import optuna
 import argparse
 import json
 import os
+
 # Configura gli argomenti
 old_args = cp.configure_args()
 device = torch.device(f"cuda:{old_args.gpu}" if torch.cuda.is_available() else "cpu")
@@ -16,14 +17,18 @@ df = pd.read_pickle(old_args.dataset_path + "df_train.csv")
 df_noise = pd.read_pickle(old_args.dataset_path + "df_noise_train.csv")
 
 print('Uploading data')
-args = cp.configure_args()    
-tr_dl, val_dl, test_dl, index_train = u.create_dataloader(df, batch_size = args.batch_size, is_noise = False, train_frac=args.train_percentage, val_frac=args.val_percentage, test_frac=args.test_percentage)
-tr_dl_noise, val_dl_noise, test_dl_noise, index_noise = u.create_dataloader(df, batch_size = args.batch_size, is_noise = True, train_frac=args.train_percentage, val_frac=args.val_percentage, test_frac=args.test_percentage)
 
-# pdb.set_trace()
+args = cp.configure_args()
+
+tr_dl, val_dl, test_dl , index_train = u.create_dataloader(df, batch_size = args.batch_size, is_noise = False, train_frac=args.train_percentage, val_frac=args.val_percentage, test_frac=args.test_percentage)
+tr_dl_noise, val_dl_noise, test_dl_noise , index_noise = u.create_dataloader(df, batch_size = args.batch_size, is_noise = True, train_frac=args.train_percentage, val_frac=args.val_percentage, test_frac=args.test_percentage)
+
+
+_, _, test_dl , index_train = u.create_dataloader(df, batch_size = 1, is_noise = False, train_frac=args.train_percentage, val_frac=args.val_percentage, test_frac=args.test_percentage)
+_, _, test_dl_noise , index_noise = u.create_dataloader(df, batch_size = 1, is_noise = True, train_frac=args.train_percentage, val_frac=args.val_percentage, test_frac=args.test_percentage)
+
 
 # Allenamento del modello
-# train_model(args, tr_dl, tr_dl_noise, val_dl, val_dl_noise)
 def save_results_to_json(file_name, trial_data):
     # Se il file esiste già, leggi i dati esistenti e aggiungi il nuovo trial
     if os.path.exists(file_name):
@@ -72,10 +77,15 @@ def objective(trial):
     return model_performance
 
 # Crea uno studio Optuna e ottimizza
-if args.tuning == True:
-    study = optuna.create_study(direction='minimize')  # o 'maximize' a seconda della tua metrica
-    study.optimize(objective, n_trials=30)
-    print("Migliori iperparametri:", study.best_params)
+
+if args.training == True:
+    if args.tuning == True:
+        study = optuna.create_study(direction='minimize')  # o 'maximize' a seconda della tua metrica
+        study.optimize(objective, n_trials=30)
+        print("Migliori iperparametri:", study.best_params)
+    else:
+        train_model(old_args, tr_dl, tr_dl_noise, val_dl, val_dl_noise)
 else:
-    train_model(old_args, tr_dl, tr_dl_noise, val_dl, val_dl_noise)
+    test_model(old_args, test_dl, test_dl_noise)
+
 

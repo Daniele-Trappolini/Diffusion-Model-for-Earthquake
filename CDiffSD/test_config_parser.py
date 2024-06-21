@@ -10,9 +10,42 @@ def configure_args(T=300, channel_type=0, dataset_type="stead"):
                         type=str,
                         help="Choose the dataset type. Options: [stead, instance]")
 
-    parser.add_argument("--dataset_path",
-                        default="/media/work/danieletrappolini/CDiffSD/Dataset/Train/",
-                        type=str)
+      # Path to the regular dataset
+    parser.add_argument("--train_data_folder",
+                        default='./CDiff_DAILY_GNSS/Training_Target', # GNSS_Giacomo/TIM_Data/GNSS_TIM/Train_H0
+                        type=str,
+                        help="Path to the regular dataset directory") 
+
+    # Path to the noise dataset
+    parser.add_argument("--val_data_folder",
+                        default='./CDiff_DAILY_GNSS/Validation_Target', # GNSS_Giacomo/TIM_Data/GNSS_TIM/Test_H0
+                        type=str,
+                        help="Path to the noise dataset directory")
+    
+    # Path to the regular dataset
+    parser.add_argument("--noise_train_data_folder",
+                        default='./CDiff_DAILY_GNSS/Training_Noise', # GNSS_Giacomo/TIM_Data/GNSS_TIM/Train_Noise_H0
+                        type=str,
+                        help="Path to the regular dataset directory")
+
+    # Path to the noise dataset
+    parser.add_argument("--noise_val_data_folder",
+                        default='./CDiff_DAILY_GNSS/Validation_Noise', # 
+                        type=str,
+                        help="Path to the noise dataset directory") 
+    
+    # Path to the noise dataset
+    parser.add_argument("--test_data_folder",
+                        default='/media/work/danieletrappolini/GNSS_Giacomo/TIM_Data/GNSS_TIM/Test_H0', # GNSS_Giacomo/TIM_Data/GNSS_TIM/Test_Noise_H0
+                        type=str,
+                        help="Path to the noise dataset directory") 
+
+    # Path to the regular dataset
+    parser.add_argument("--noise_test_data_folder",
+                        default='/media/work/danieletrappolini/GNSS_Giacomo/TIM_Data/GNSS_TIM/Test_Noise_H0', # GNSS_Giacomo/TIM_Data/GNSS_TIM/Train_Noise_H0
+                        type=str,
+                        help="Path to the regular dataset directory")
+
 
     # GPU
 
@@ -34,7 +67,7 @@ def configure_args(T=300, channel_type=0, dataset_type="stead"):
 
     # Epochs
     parser.add_argument("--epochs",
-                        default=30,
+                        default=100,
                         type=int,
                         help="Number of training epochs")
 
@@ -55,7 +88,7 @@ def configure_args(T=300, channel_type=0, dataset_type="stead"):
                         help="Percentage of data for testing (default: 0.05)")
     # Trace parameters
     parser.add_argument("--trace_size",
-                        default=3000,
+                        default=1000,
                         type=int,
                         help="trace size (default: 3000)")
     parser.add_argument("--signal_start",
@@ -75,7 +108,7 @@ def configure_args(T=300, channel_type=0, dataset_type="stead"):
 
     # Diffusion model sceduler
     parser.add_argument("--T",
-                        default=T,
+                        default=300,
                         type=int,
                         help=f"Timesteps for diffusion model (default: {T})")
     
@@ -92,7 +125,7 @@ def configure_args(T=300, channel_type=0, dataset_type="stead"):
     
     # RNF
     parser.add_argument("--Range_RNF",
-                        default=(40,65),  # Sostituisci con il tuo default se necessario
+                        default=(10,90),  # Sostituisci con il tuo default se necessario
                         type=tuple,
                         help="Range RNF come tupla di due interi (min,max). Esempio: --Range_RNF 10,20")
 
@@ -127,12 +160,6 @@ def configure_args(T=300, channel_type=0, dataset_type="stead"):
                         default=True,
                         type=bool,
                         help="If you want to apply the iperparameter tuning")
-    
-    
-    parser.add_argument("--training",
-                        default=False,
-                        type=bool,
-                        help="If you want to train or test your model")
 
    
     parser.add_argument("--iswandb",
@@ -141,21 +168,25 @@ def configure_args(T=300, channel_type=0, dataset_type="stead"):
                         help="If you want to log in wandb")
     
     parser.add_argument("--checkpoint_path",
-                        default="./Checkpoint/Channel_E/",
+                        default="./Checkpoint/Channel_0/",
                         type=str)
     
+
+        
+    parser.add_argument("--path_model",
+                        default="",
+                        type=str)
+    
+    
+     
     parser.add_argument("--file_name",
                         default="ColdDiffusion",
-                        type=str)
-    
-    parser.add_argument("--path_model",
-                        default="/media/work/danieletrappolini/CDiffSD/CDiffSD/Checkpoint/Channel_E/epoch_0_20_cosine_(40, 65)_ColdDiffusion",
                         type=str)
     
   
     args = parser.parse_args()
     
-    args.signal_start = 700
+    args.signal_start = 0
 
     if not os.path.exists(args.checkpoint_path):
         os.makedirs(args.checkpoint_path)

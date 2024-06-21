@@ -7,6 +7,8 @@ from scheduler import *
 from torch.optim import Adam
 from utils.model import Unet1D
 import torch.optim.lr_scheduler as lr_scheduler
+import utils.testing as testing
+
 
 ### Model Parameters 
 def create_model_and_optimizer(args):
@@ -17,6 +19,12 @@ def create_model_and_optimizer(args):
     )
     optimizer = Adam(model.parameters(), lr= args.lr)
     return model, optimizer
+
+
+def load_model_and_weights(path_model):
+    model = Unet1D(dim=8, dim_mults=(1, 2, 4, 8), channels=1)
+    model.load_state_dict(torch.load(path_model, map_location=device))
+    return model
 
 ### Loss
 def p_losses(args,denoise_model, eq_in, noise_real, t, sqrt_alphas_cumprod, sqrt_one_minus_alphas_cumprod,device,loss_type="l1"):
@@ -55,8 +63,6 @@ def train_one_epoch(model, optimizer, tr_dl, tr_dl_noise, args,device):
     sum_train_loss = 0
     for step, (eq_in, noise_in) in tqdm(enumerate(zip(tr_dl, tr_dl_noise)), total=len(tr_dl)):
         optimizer.zero_grad()
-        #pdb.set_trace()
-        ## Input 1D
         eq_in = eq_in[1][:, args.channel_type, :].unsqueeze(dim=1).to(device)
     
         reduce_noise = random.randint(*args.Range_RNF) * 0.01
@@ -131,3 +137,43 @@ def train_model(args, tr_dl, tr_dl_noise, val_dl, val_dl_noise):
         wandb.finish()  # End the wandb run after training is complete
 
     return min_loss
+
+def test_model(args,test_loader,noise_test_loader):
+    device = torch.device(f"cuda:{args.gpu}" if torch.cuda.is_available() else "cpu")
+    testing.initialize_parameters(args.T)
+    model = load_model_and_weights(args.path_model)
+    model = model.to(device)
+
+    Original, restored_direct, restored_sampling, Noised = [], [], [], []
+    
+    T = args.T
+
+    with torch.no_grad():
+        model.eval()
+        for eq_in, noise_in in tqdm(zip(test_loader, noise_test_loader), total=len(test_loader)):
+            eq_in = eq_in[1][:,args.channel_type,:].unsqueeze(dim=1).to(device)
+            reduce_noise = random.randint(*args.Range_RNF) * 0.01
+            noise_real = (noise_in[1][:,args.channel_type,:].unsqueeze(dim=1) * reduce_noise).to(device)
+            signal_noisy = eq_in + noise_real
+            t = torch.Tensor([T-1]).long().to(device)
+            
+            restored_ch1 = testing.direct_denoising(model, signal_noisy.to(device).float().reshape(-1,1,args.trace_size), t)
+            restored_direct.extend([x[0].cpu().numpy() for x in restored_ch1])
+
+
+            t = T-1
+            restored_sample = testing.sample(
+                                            model,
+                                            signal_noisy.float().reshape(-1, 1, args.trace_size),
+                                            t,
+                                            batch_size=signal_noisy.shape[0]
+                                            )
+            restored_sampling.extend([x[0].cpu().numpy() for x in restored_sample[-1]])
+            Original.extend(eq_in.squeeze().cpu().numpy())
+            Noised.extend(signal_noisy.squeeze().cpu().numpy())
+        
+
+    np.save(f"./Restored/Restored_direct_0.npy", np.array(restored_direct))
+    np.save(f"./Restored/Restored_sampling_0.npy", np.array(restored_sampling))
+    np.save(f"./Restored/Original.npy", np.array(Original))
+    np.save(f"./Restored/Noised.npy", np.array(Noised))
