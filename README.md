@@ -60,9 +60,22 @@ To replicate the results and start training the model, follow these steps:
 4. **Monitor Training**:
    - Training logs and checkpoints will be saved in the specified directory. Monitor the training process using these logs.
 
+
+### Configuration Details
+
+To start training, you need to configure the arguments in the `config_parser.py` file. Here are some important settings:
+
+- Set `training=True` for training mode or `training=False` for testing mode.
+- Specify the model path using `path_model` if you want to use a pre-trained model for testing.
+- Set the channel type using `channel_type=0` for E, `channel_type=1` for N, and `channel_type=2` for Z.
+- During training, you can set `tuning=True` to enable hyperparameter tuning, or `tuning=False` to disable it.
+- Adjust the `T` parameter to set the number of timesteps for the model.
+
+
 ## Related Paper
 * [Seismic Signal Denoising and Decomposition Using Deep Neural Networks](https://arxiv.org/abs/1811.02695)
 * [Cold Diffusion: Inverting Arbitrary Image Transforms Without Noise](https://arxiv.org/abs/2208.09392)
+* [Seismic Signal Denoising and Decomposition Using Deep Neural Networks](https://ieeexplore.ieee.org/document/8802278)
 
 ## Citation
 
