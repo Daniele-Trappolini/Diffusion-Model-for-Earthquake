@@ -33,6 +33,40 @@ In our evaluation, we applied PhaseNet to waveforms for assessing denoiser impac
 </p>
 You can find the dataset used for training, evaluation, and testing on Zenodo: [STEAD subsample 4 CDiffSD](https://zenodo.org/record/10972601)
 
+### Data Loader Usage
+
+To create a DataLoader, use the following parameters:
+- `feature_columns`: List of feature columns (e.g., `'Z_channel', 'E_channel', 'N_channel'`).
+- `target_columns`: List of target columns (e.g., `'p_arrival_sample', 's_arrival_sample'`).
+- `trace_name_column`: Column containing trace names.
+
+The DataLoader has three elements:
+- Index for mapping to trace names.
+- Normalized or non-normalized channels (`'Z_channel', 'E_channel', 'N_channel'`) based on the normalize flag.
+- `'p_arrival_sample'` (P-wave arrival) and `'s_arrival_sample'` (S-wave arrival) for target columns.
+
+This DataLoader setup allows us to train our model using the prepared data.
+
+*Example of how to use* **utils.create_data_loader**:
+
+```python
+import pandas as pd
+import utils.utils_diff as u
+
+df_path = your_path + 'df_train.csv'
+df_path_noise = your_path + 'df_noise_train.csv'
+
+df = pd.read_pickle(df_path)
+df_noise = pd.read_pickle(df_path_noise)
+
+feature_columns = ['Z_channel', 'E_channel', 'N_channel']  
+target_columns = ['p_arrival_sample', 's_arrival_sample'] 
+trace_name_column = 'trace_name' 
+
+train_loader, val_loader, test_loader, index_to_trace_name = u.create_data_loader(df, feature_columns, target_columns, trace_name_column, batch_size=2, shuffle=True)
+train_noise_loader, val_noise_loader, test_noise_loader,index_to_trace_name = u.create_data_loader(df_noise, feature_columns, target_columns, trace_name_column,is_noise = True, batch_size=2, shuffle=True)
+
+
 ## How to Start Training
 
 To replicate the results and start training the model, follow these steps:
