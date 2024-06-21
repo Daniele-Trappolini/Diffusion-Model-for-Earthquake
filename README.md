@@ -21,7 +21,7 @@ In Example 2, we demonstrate the Cold Diffusion Model's superiority in preservin
 
 **Enhance Automatic Picking Performance**
 <p align="center">
-  <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.jpg" width="375">
+  <img src="https://github.com/Daniele-Trappolini/Diffusion-Model-for-Earthquake/blob/main/Images/picker.pdf" width="375">
 </p>
 In our evaluation, we applied PhaseNet to waveforms for assessing denoiser impacts on P and S wave arrivals. Histograms comparing "direct," "sampling," and "deep denoiser" methods highlighted the "sampling" method's superior accuracy in aligning with manual picks, especially at higher parameter settings. The "direct" method showed improved P-wave accuracy with parameter increases, while the "deep denoiser" displayed moderate recall rates. Overall, S-wave detections were consistently precise across methods, but P-wave picks varied, with the "sampling" method showing the least discrepancy from manual picks. This study underscores the significance of denoising in automated seismic analysis, with the "sampling" approach being notably effective.
 
