@@ -63,8 +63,8 @@ feature_columns = ['Z_channel', 'E_channel', 'N_channel']
 target_columns = ['p_arrival_sample', 's_arrival_sample'] 
 trace_name_column = 'trace_name' 
 
-train_loader, val_loader, test_loader, index_to_trace_name = u.create_data_loader(df, feature_columns, target_columns, trace_name_column, batch_size=2, shuffle=True)
-train_noise_loader, val_noise_loader, test_noise_loader,index_to_trace_name = u.create_data_loader(df_noise, feature_columns, target_columns, trace_name_column,is_noise = True, batch_size=2, shuffle=True)
+train_loader, val_loader, test_loader, index_to_trace_name = u.create_data_loader(df, feature_columns, target_columns, trace_name_column, batch_size= ... , shuffle=True)
+train_noise_loader, val_noise_loader, test_noise_loader,index_to_trace_name = u.create_data_loader(df_noise, feature_columns, target_columns, trace_name_column,is_noise = True, batch_size= ..., shuffle=True)
 ```
 
 
