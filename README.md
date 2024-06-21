@@ -41,10 +41,10 @@ To replicate the results and start training the model, follow these steps:
    - Ensure you have conda installed. If not, download and install it from [Conda's official website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
    - Download the `environment.yaml` file from this repository.
 
-   \`\`\`bash
+   ```bash
    conda env create -f environment.yaml
    conda activate cold-diffusion
-   \`\`\`
+   ```
 
 2. **Download the Dataset**:
    - Download the STEAD dataset from [Zenodo](https://zenodo.org/record/10972601).
@@ -53,9 +53,9 @@ To replicate the results and start training the model, follow these steps:
    - Ensure the dataset is placed in the correct directory as expected by the script.
    - Execute the training script with the following command:
 
-   \`\`\`bash
+   ```bash
    python train.py --dataset_path path/to/STEAD_dataset
-   \`\`\`
+   ```
 
 4. **Monitor Training**:
    - Training logs and checkpoints will be saved in the specified directory. Monitor the training process using these logs.
@@ -68,7 +68,7 @@ To replicate the results and start training the model, follow these steps:
 
 If you use this code or dataset in your research, please cite our paper:
 
-\`\`\`bibtex
+```bibtex
 @article{trappolini2024cold,
   title={Cold diffusion model for seismic denoising},
   author={Trappolini, Daniele and Laurenti, Laura and Poggiali, Giulio and Tinti, Elisa and Galasso, Fabio and Michelini, Alberto and Marone, Chris},
@@ -79,5 +79,4 @@ If you use this code or dataset in your research, please cite our paper:
   year={2024},
   publisher={Wiley Online Library}
 }
-\`\`\`
-"""
+```
